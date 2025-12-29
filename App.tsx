@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { PERSONAL_INFO, EXPERIENCES, PROJECTS, CASE_STUDIES, SKILLS, CERTIFICATIONS, EDUCATION } from './data';
 import { CaseStudy } from './types';
-import AIChatAssistant from './components/AIChatAssistant';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState('experience');
@@ -25,8 +24,6 @@ const App: React.FC = () => {
         {/* Subtle Grid Pattern */}
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
       </div>
-
-      <AIChatAssistant />
 
       {/* PRD Detailed Modal */}
       {selectedPRD && (
@@ -449,16 +446,21 @@ const App: React.FC = () => {
           <h2 className="text-5xl md:text-8xl font-black text-white mb-14 italic uppercase tracking-tighter leading-none">
             Scale the <span className="text-blue-600">Vision</span>
           </h2>
-          <div className="flex flex-wrap gap-6 justify-center">
-            <a href={`mailto:${PERSONAL_INFO.email}`} className="px-14 py-6 bg-blue-600 text-white font-black uppercase text-[11px] tracking-[0.4em] rounded-2xl hover:bg-blue-500 transition-all shadow-2xl shadow-blue-600/20 hover:scale-105 active:scale-95">
-              Shoot an Email
-            </a>
+          <div className="flex flex-wrap gap-6 justify-center items-center">
+            <div className="flex flex-col items-center gap-3">
+              <a href={`mailto:${PERSONAL_INFO.email}`} className="px-14 py-6 bg-blue-600 text-white font-black uppercase text-[11px] tracking-[0.4em] rounded-2xl hover:bg-blue-500 transition-all shadow-2xl shadow-blue-600/20 hover:scale-105 active:scale-95">
+                Shoot an Email
+              </a>
+              <span className="text-[12px] font-bold text-slate-400 lowercase tracking-widest select-all">
+                {PERSONAL_INFO.email}
+              </span>
+            </div>
             <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="px-14 py-6 bg-white/5 border border-white/10 text-white font-black uppercase text-[11px] tracking-[0.4em] rounded-2xl hover:bg-white/10 transition-all hover:scale-105 active:scale-95">
               LinkedIn Profile
             </a>
           </div>
           <p className="mt-20 text-[10px] font-black text-slate-600 uppercase tracking-[0.5em]">
-            © {new Date().getFullYear()} SAMWAD PATIL • PRODUCT MANAGEMENT
+            © SAMWAD PATIL • PRODUCT MANAGEMENT
           </p>
         </div>
       </footer>
