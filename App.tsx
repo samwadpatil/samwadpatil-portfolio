@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { PERSONAL_INFO, EXPERIENCES, PROJECTS, CASE_STUDIES, SKILLS, CERTIFICATIONS, EDUCATION } from './data';
 import { CaseStudy } from './types';
+import AIChatAssistant from './components/AIChatAssistant';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState('experience');
@@ -55,6 +56,9 @@ const App: React.FC = () => {
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-600 rounded-full blur-[120px]"></div>
       </div>
 
+      {/* AI Chat Assistant Component */}
+      <AIChatAssistant />
+
       {/* PRD Detailed Modal */}
       {selectedPRD && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12 animate-in fade-in zoom-in duration-200">
@@ -75,7 +79,6 @@ const App: React.FC = () => {
 
             <div className="flex-1 overflow-y-auto p-8 md:p-16 space-y-24 no-scrollbar bg-white/[0.01]">
               
-              {/* Heading 1: Why? (Objective) */}
               <section className="space-y-8">
                 <h3 className="text-xl font-black text-white border-b border-white/5 pb-4 uppercase tracking-widest italic text-blue-500">Why? (Objective)</h3>
                 <div className="grid md:grid-cols-2 gap-12">
@@ -90,7 +93,6 @@ const App: React.FC = () => {
                 </div>
               </section>
 
-              {/* Heading 2: How do we measure success? */}
               <section className="space-y-8">
                 <h3 className="text-xl font-black text-white border-b border-white/5 pb-4 uppercase tracking-widest italic text-blue-500">How do we measure success?</h3>
                 <div className="space-y-6">
@@ -119,7 +121,6 @@ const App: React.FC = () => {
                 </div>
               </section>
 
-              {/* Heading 3: Who are the users: */}
               <section className="space-y-8">
                 <h3 className="text-xl font-black text-white border-b border-white/5 pb-4 uppercase tracking-widest italic text-blue-500">Who are the users:</h3>
                 <div className="grid md:grid-cols-2 gap-12">
@@ -144,7 +145,6 @@ const App: React.FC = () => {
                 </div>
               </section>
 
-              {/* Heading 4: Solution: */}
               <section className="space-y-8">
                 <h3 className="text-xl font-black text-white border-b border-white/5 pb-4 uppercase tracking-widest italic text-blue-500">Solution:</h3>
                 <div className="space-y-8">
@@ -159,7 +159,6 @@ const App: React.FC = () => {
                 </div>
               </section>
 
-              {/* Heading 5: Product flow (Details of the feature/product): */}
               <section className="space-y-8">
                 <h3 className="text-xl font-black text-white border-b border-white/5 pb-4 uppercase tracking-widest italic text-blue-500">Product flow (Details of the feature/product):</h3>
                 <div className="space-y-10">
@@ -210,7 +209,6 @@ const App: React.FC = () => {
                 </div>
               </section>
 
-              {/* Heading 6: Dependencies: */}
               <section className="space-y-8">
                 <h3 className="text-xl font-black text-white border-b border-white/5 pb-4 uppercase tracking-widest italic text-blue-500">Dependencies:</h3>
                 <div className="grid md:grid-cols-3 gap-8">
