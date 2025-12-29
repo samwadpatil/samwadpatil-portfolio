@@ -8,7 +8,12 @@ export const PERSONAL_INFO = {
   phone: "+91 9834147657",
   location: "Chh. Sambhajinagar, Maharashtra, India",
   linkedin: "https://linkedin.com/in/samwad-patil",
-  profileImage: "https://media.licdn.com/dms/image/v2/D5603AQF3JjSG80Llbg/profile-displayphoto-shrink_800_800/B56ZTbm9BXHoAg-/0/1738851210351?e=1768435200&v=beta&t=EgvuDJyhhZ7aB4c8w5FWrhIqdVkOK5-HvqGJffF2SqI",
+  /**
+   * ACTION REQUIRED: 
+   * Replace the URL below with your actual photo link.
+   * Example: "https://media.licdn.com/dms/image/..."
+   */
+  profileImage: "https://media.licdn.com/dms/image/v2/D5603AQEmUU-8Yz-Daw/profile-displayphoto-crop_800_800/B56ZtpJPJ.J8AI-/0/1766995588370?e=1768435200&v=beta&t=9iSOzF053JpUi4NnpI4-52ia4togmG4OKRSP727UN-U",
   summary: "B.Tech Electrical Engineering student with a proven track record of launching products from 0 to 1. Founded a fashion brand and led the development of an AI-driven EdTech MVP. Expert in translating user pain points into technical roadmaps and managing cross-functional projects. Seeking a Product Management Internship to drive data-led growth and user-centric innovation."
 };
 
@@ -190,7 +195,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     color: "bg-black",
     framework: "Kano Model",
     northStarMetric: { label: "Completed Trip Rate", value: "+5.4%" },
-    secondaryMetrics: [{ label: "Post-Match Cancellation", trend: 'down' }],
+    secondaryMetrics: [{ label: "Post-Match Cancellation", trend: 'up' }],
     sections: [{ heading: "Summary", content: "Reducing the 12% churn that happens within 2 minutes of a driver match." }],
     fullPRD: {
       why: {
