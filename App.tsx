@@ -196,7 +196,7 @@ const App: React.FC = () => {
                       <div>
                         <p className="text-[10px] font-black text-blue-400 uppercase tracking-widest mb-4">5. Edge cases</p>
                         <ul className="space-y-2">
-                           {selectedPRD.fullPRD.edgeCases.map((ec, i) => (
+                           {selectedPRD.fullPRD.productFlow.edgeCases.map((ec, i) => (
                              <li key={i} className="text-sm text-slate-400 flex gap-3"><span className="text-orange-500 font-bold">!</span> {ec}</li>
                            ))}
                         </ul>
